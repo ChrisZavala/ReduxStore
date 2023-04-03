@@ -1,7 +1,10 @@
+require('dotenv').config();
+
 const { AuthenticationError } = require('apollo-server-express');
 const { User, Product, Category, Order } = require('../models');
 const { signToken } = require('../utils/auth');
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+// const stripe = require('stripe')('sk_test_51MsZkXL4IiXtNUVd1o9i6HoVtC6iuXE3euhPBSr9rVcn6zN2gvGjumYGVfSbIQ57Vk8T8ycRAxzbBJKGuF8uAUKR00C2eG0h6L');
 
 
 const resolvers = {
@@ -98,7 +101,7 @@ const resolvers = {
       return { token, user };
     },
     addOrder: async (parent, { products }, context) => {
-      console.log(context);
+      // console.log(context);
       if (context.user) {
         const order = new Order({ products });
 
