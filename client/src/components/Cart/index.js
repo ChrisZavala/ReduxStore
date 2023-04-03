@@ -21,8 +21,9 @@ import CartItem from '../CartItem';
 import './style.css';
 
 // returns a promise with the stripe object
-const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
-
+const stripePromise = loadStripe('pk_test_51MsZkXL4IiXtNUVdHEeGcXTqjs447b5XfdwMV3djGKDpyugDbqdMy91II0T0bjyClN2TWx4X5t0Oep0XU1WYLtIK00f1Us254C');
+// pk_test_51MsZkXL4IiXtNUVdHEeGcXTqjs447b5XfdwMV3djGKDpyugDbqdMy91II0T0bjyClN2TWx4X5t0Oep0XU1WYLtIK00f1Us254C
+// pk_test_TYooMQauvdEDq54NiTphI7jx
 const Cart = () => {
   const dispatch = useDispatch();
   const state = useSelector(state => state);
